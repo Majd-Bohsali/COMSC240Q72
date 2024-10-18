@@ -1,8 +1,11 @@
+from functools import reduce
+
 def getSum(numbers, n): 
      
     sumsList = []
     for startIndex in range(0, len(numbers) - n + 1): 
-        print("startIndex: ", startIndex)
+        sums = reduce(lambda x, y: x + y, numbers[startIndex: startIndex + n])
+        print(sum)
     
     return 0
 
